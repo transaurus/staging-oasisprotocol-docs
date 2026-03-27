@@ -1,0 +1,36 @@
+You are about to sign the following transaction:
+Format: plain
+Method: rofl.Update
+Body:
+  {
+    "id": "rofl1qzd82n99vtwesvcqjfyur4tcm45varz2due7s635",
+    "policy": {
+      "quotes": {
+        "pcs": {
+          "tcb_validity_period": 30,
+          "min_tcb_evaluation_data_number": 17,
+          "tdx": {}
+        }
+      },
+      "enclaves": [],
+      "endorsements": [
+        {
+          "any": {}
+        }
+      ],
+      "fees": 2,
+      "max_expiration": 3
+    },
+    "admin": "oasis1qrk58a6j2qn065m6p06jgjyt032f7qucy5wqeqpt"
+  }
+Authorized signer(s):
+  1. sk5kvBHaZ/si0xXRdjllIOxOgr7o2d1K+ckVaU3ndG4= (ed25519)
+     Nonce: 320
+Fee:
+  Amount: 0.010145 TEST
+  Gas limit: 101450
+  (gas price: 0.0000001 TEST per gas unit)
+
+Network:  testnet
+ParaTime: sapphire (Sapphire Testnet)
+Account:  test:dave

@@ -1,0 +1,7 @@
+Creating a new ROFL app with default policy...
+Name:     myapp
+Version:  0.1.0
+TEE:      tdx
+Kind:     container
+Created manifest in 'rofl.yaml'.
+Run `oasis rofl create` to register your ROFL app and configure an app ID.

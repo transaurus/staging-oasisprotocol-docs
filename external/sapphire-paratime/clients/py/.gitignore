@@ -1,0 +1,4 @@
+__pycache__
+docs
+.mypy_cache
+*.egg-info

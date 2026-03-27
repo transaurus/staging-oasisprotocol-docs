@@ -1,0 +1,35 @@
+You are about to sign the following transaction:
+Format: plain
+Method: rofl.Create
+Body:
+  {
+    "policy": {
+      "quotes": {
+        "pcs": {
+          "tcb_validity_period": 30,
+          "min_tcb_evaluation_data_number": 17,
+          "tdx": {}
+        }
+      },
+      "enclaves": [],
+      "endorsements": [
+        {
+          "any": {}
+        }
+      ],
+      "fees": 2,
+      "max_expiration": 3
+    },
+    "scheme": 1
+  }
+Authorized signer(s):
+  1. sk5kvBHaZ/si0xXRdjllIOxOgr7o2d1K+ckVaU3ndG4= (ed25519)
+     Nonce: 319
+Fee:
+  Amount: 0.0101405 TEST
+  Gas limit: 101405
+  (gas price: 0.0000001 TEST per gas unit)
+
+Network:  testnet
+ParaTime: sapphire (Sapphire Testnet)
+Account:  test:dave

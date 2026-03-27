@@ -1,0 +1,74 @@
+{
+  "link.title.Tools": {
+    "message": "Tools",
+    "description": "The title of the footer links column with title=Tools in the footer"
+  },
+  "link.title.Build": {
+    "message": "Build",
+    "description": "The title of the footer links column with title=Build in the footer"
+  },
+  "link.title.Node": {
+    "message": "Node",
+    "description": "The title of the footer links column with title=Node in the footer"
+  },
+  "link.title.Community": {
+    "message": "Community",
+    "description": "The title of the footer links column with title=Community in the footer"
+  },
+  "link.item.label.Explorer": {
+    "message": "Explorer",
+    "description": "The label of footer link with label=Explorer linking to https://explorer.oasis.io"
+  },
+  "link.item.label.Wallet": {
+    "message": "Wallet",
+    "description": "The label of footer link with label=Wallet linking to https://wallet.oasis.io"
+  },
+  "link.item.label.CLI": {
+    "message": "CLI",
+    "description": "The label of footer link with label=CLI linking to https://github.com/oasisprotocol/cli"
+  },
+  "link.item.label.Status": {
+    "message": "Status",
+    "description": "The label of footer link with label=Status linking to https://status.oasis.io"
+  },
+  "link.item.label.Testnet Faucet": {
+    "message": "Testnet Faucet",
+    "description": "The label of footer link with label=Testnet Faucet linking to https://faucet.testnet.oasis.io/"
+  },
+  "link.item.label.Demos": {
+    "message": "Demos",
+    "description": "The label of footer link with label=Demos linking to https://demos.oasis.io/"
+  },
+  "link.item.label.API": {
+    "message": "API",
+    "description": "The label of footer link with label=API linking to https://api.docs.oasis.io/"
+  },
+  "link.item.label.Mainnet": {
+    "message": "Mainnet",
+    "description": "The label of footer link with label=Mainnet linking to node/network/mainnet"
+  },
+  "link.item.label.Testnet": {
+    "message": "Testnet",
+    "description": "The label of footer link with label=Testnet linking to node/network/testnet"
+  },
+  "link.item.label.Discord": {
+    "message": "Discord",
+    "description": "The label of footer link with label=Discord linking to https://oasis.io/discord"
+  },
+  "link.item.label.Telegram": {
+    "message": "Telegram",
+    "description": "The label of footer link with label=Telegram linking to https://t.me/oasisprotocolcommunity"
+  },
+  "link.item.label.Youtube": {
+    "message": "Youtube",
+    "description": "The label of footer link with label=Youtube linking to https://www.youtube.com/channel/UC35UFPcZ2F1wjPxhPrSsESQ"
+  },
+  "link.item.label.GitHub": {
+    "message": "GitHub",
+    "description": "The label of footer link with label=GitHub linking to https://github.com/oasisprotocol"
+  },
+  "copyright": {
+    "message": "\n<p xmlns:cc=\"http://creativecommons.org/ns#\" >Copyright © 2026\nby <a rel=\"cc:attributionURL dct:creator\" property=\"cc:attributionName\" href=\"https://oasis.net\">\nOasis Protocol Foundation</a>. We <a href=\"https://oasisprotocol.org/privacy-policy\" target=\"_blank\" rel=\"noopener noreferrer\">respect your privacy</a>.\nUnless otherwise specified, all text and images on this website are licensed\nunder <a href=\"http://creativecommons.org/licenses/by/4.0/?ref=chooser-v1\"\ntarget=\"_blank\" rel=\"license noopener noreferrer\" style=\"display:inline-block;\">\nCC BY 4.0<img style=\"height:22px!important;margin-left:3px;vertical-align:text-bottom;\"\nsrc=\"/img/cc.svg\"><img style=\"height:22px!important;margin-left:3px;vertical-align:text-bottom;\"\nsrc=\"/img/by.svg\"></a>.\nThis does not include the Oasis software and the code examples, both of which are\nlicensed under <a href=\"https://www.apache.org/licenses/LICENSE-2.0\"\ntarget=\"_blank\" rel=\"license noopener noreferrer\" style=\"display:inline-block;\">\nApache 2.0</a>. Built with &#x2665; and Docusaurus.</p>",
+    "description": "The footer copyright"
+  }
+}

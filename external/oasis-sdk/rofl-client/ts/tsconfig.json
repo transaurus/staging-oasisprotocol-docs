@@ -1,0 +1,29 @@
+{
+    "compilerOptions": {
+        "target": "ES2022",
+        "module": "NodeNext",
+        "moduleResolution": "NodeNext",
+
+        "rootDir": "./src",
+        "outDir": "./dist/esm",
+
+        "lib": ["ES2022"],
+        "types": ["node"],
+
+        "strict": true,
+        "noImplicitAny": true,
+        "resolveJsonModule": true,
+        "declaration": true,
+        "declarationDir": "./dist",
+        "verbatimModuleSyntax": true,
+        "moduleDetection": "force"
+    },
+    "include": ["src/**/*"],
+    "exclude": ["test/**/*", "examples/**/*"],
+    "typedocOptions": {
+        "entryPoints": ["src/index.ts"],
+        "out": "docs/api",
+        "excludeInternal": true,
+        "excludePrivate": true
+    }
+}

@@ -1,0 +1,15 @@
+You are about to sign the following transaction:
+Method: staking.Allow
+Body:
+  Beneficiary:   oasis1qqczuf3x6glkgjuf0xgtcpjjw95r3crf7y2323xd
+  Amount change: +10.0 TEST
+Nonce:  2
+Fee:
+  Amount: 0.0 TEST
+  Gas limit: 1286
+  (gas price: 0.0 TEST per gas unit)
+
+Network:  testnet
+ParaTime: none (consensus layer)
+Account:  oscar
+(In case you are using a hardware-based signer you may need to confirm on device.)

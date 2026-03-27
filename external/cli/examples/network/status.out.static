@@ -1,0 +1,46 @@
+=== NETWORK STATUS ===
+Network:      mainnet
+Node's ID:    mVyn1iZkOAlP7AQRuhYHahAkUEGJmywY1G8raR5u/3I=
+Core version: 23.0.9
+
+==== Consensus ====
+Status:               ready
+Version:              7.0.0
+Chain context:        bb3d748def55bdfb797a2ac53ee6ee141e54cd2ab2dc2375f4a0703a178e6e55
+Latest height:        18458209 (2024-03-21 10:47:52 +0100 CET)
+Latest block hash:    eb3fbe258b3066935de32158ac1b0cf2d3f79f5558682eee8f04f3afc80374ae
+Latest epoch:         30750
+Is validator:         false
+Registration:         false
+
+==== ParaTimes ====
+cipher (000000000000000000000000000000000000000000000000e199119c992377cb):
+  Kind:                 compute
+  Is confidential:      true
+  Status:               ready
+  Latest round:         1612018 (2024-03-21 10:47:52 +0100 CET)
+  Last finalized round: 1612018
+  Storage status:       syncing rounds
+  Active version:       3.0.2
+  Available version(s): 2.6.2, 3.0.2
+  Number of peers:      30
+emerald (000000000000000000000000000000000000000000000000e2eaa99fc008f87f):
+  Kind:                 compute
+  Is confidential:      false
+  Status:               ready
+  Latest round:         9509250 (2024-03-21 10:47:52 +0100 CET)
+  Last finalized round: 9509250
+  Storage status:       syncing rounds
+  Active version:       11.0.0
+  Available version(s): 10.0.0, 11.0.0
+  Number of peers:      29
+sapphire (000000000000000000000000000000000000000000000000f80306c9858e7279):
+  Kind:                 compute
+  Is confidential:      true
+  Status:               ready
+  Latest round:         2958958 (2024-03-21 10:47:52 +0100 CET)
+  Last finalized round: 2958958
+  Storage status:       syncing rounds
+  Active version:       0.7.0
+  Available version(s): 0.7.0
+  Number of peers:      39

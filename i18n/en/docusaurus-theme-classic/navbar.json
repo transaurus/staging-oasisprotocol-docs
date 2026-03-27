@@ -1,0 +1,26 @@
+{
+  "logo.alt": {
+    "message": "Oasis Docs",
+    "description": "The alt text of navbar logo"
+  },
+  "item.label.Build": {
+    "message": "Build",
+    "description": "Navbar item with label Build"
+  },
+  "item.label.Learn": {
+    "message": "Learn",
+    "description": "Navbar item with label Learn"
+  },
+  "item.label.Get Involved": {
+    "message": "Get Involved",
+    "description": "Navbar item with label Get Involved"
+  },
+  "item.label.Run Node": {
+    "message": "Run Node",
+    "description": "Navbar item with label Run Node"
+  },
+  "item.label.Develop Core": {
+    "message": "Develop Core",
+    "description": "Navbar item with label Develop Core"
+  }
+}

@@ -1,0 +1,46 @@
+Using provider: oasis1qzc8pldvm8vm3duvdrj63wgvkw34y9ucfcxzetqr
+Pushing ROFL app to OCI repository 'rofl.sh/7aaddbd5-d782-430f-9362-f0107aa109d2:1750242297'...
+No pre-existing machine configured, creating a new one...
+Taking offer: small [0000000000000000]
+WARNING: Machine rental is non-refundable. You will not get a refund for the already paid term if you cancel.
+Unlock your account.
+? Passphrase: 
+You are about to sign the following transaction:
+Format: plain
+Method: roflmarket.InstanceCreate
+Body:
+  {
+    "provider": "oasis1qzc8pldvm8vm3duvdrj63wgvkw34y9ucfcxzetqr",
+    "offer": "0000000000000000",
+    "deployment": {
+      "app_id": "rofl1qpw7gxp7dqq72sdtpv4jrmdfys9nsp73wysglhue",
+      "manifest_hash": "c2bc74e68cbb5b9a70a2c7a378f79158e2c5975eca6bd4cbbeff602a1a12b311",
+      "metadata": {
+        "net.oasis.deployment.orc.ref": "rofl.sh/7aaddbd5-d782-430f-9362-f0107aa109d2:1750242297@sha256:ee206f123b395c630e6b52ff779c0cd63eb5ea99ba97275559558e340647ccb2"
+      }
+    },
+    "term": 1,
+    "term_count": 24
+  }
+Authorized signer(s):
+  1. Amc63/tU+uNrYi7OID2a5a/hHbsbGTtAolnlyA+MF5g5 (secp256k1eth)
+     Nonce: 6
+Fee:
+  Amount: 0.0121926 ROSE
+  Gas limit: 121926
+  (gas price: 0.0000001 ROSE per gas unit)
+
+Network:  mainnet
+ParaTime: sapphire
+Account:  test:dave
+? Sign this transaction? Yes
+(In case you are using a hardware-based signer you may need to confirm on device.)
+Broadcasting transaction...
+Transaction included in block successfully.
+Round:            9356523
+Transaction hash: bce96976f38485546b5950f8b2a7f9b7c43b9656935cc472a90680187469f4dd
+Execution successful.
+Created machine: 0000000000000000
+Deployment into machine scheduled.
+This machine expires on 2025-08-07 12:35:47 +0200 CEST. Use `oasis rofl machine top-up` to extend it.
+Use `oasis rofl machine show` to check status.

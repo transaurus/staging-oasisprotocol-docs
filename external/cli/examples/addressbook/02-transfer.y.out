@@ -1,0 +1,18 @@
+You are about to sign the following transaction:
+Format: plain
+Method: accounts.Transfer
+Body:
+  To: meghan (0xBe8B38ED9b0794e7ab9EbEfC1e710b4F4EC6F6C1)
+  Amount: 2.5 ROSE
+Authorized signer(s):
+  1. ArEjDxsPfDvfeLlity4mjGzy8E/nI4umiC8vYQh+eh/c (secp256k1eth)
+     Nonce: 0
+Fee:
+  Amount: 0.0002779 ROSE
+  Gas limit: 2779
+  (gas price: 0.0000001 ROSE per gas unit)
+
+Network:  mainnet
+ParaTime: emerald
+Account:  eugene
+(In case you are using a hardware-based signer you may need to confirm on device.)

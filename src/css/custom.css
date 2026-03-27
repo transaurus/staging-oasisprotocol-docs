@@ -1,0 +1,362 @@
+/**
+ * Any CSS included here will be global. The classic template
+ * bundles Infima by default. Infima is a CSS framework designed to
+ * work well for content-centric websites.
+ */
+ @import "@fontsource-variable/inter";
+
+/* You can override the default Infima variables here. */
+:root {
+  --ifm-color-primary: #0500e1;
+  --ifm-color-primary-dark: #0500e1;
+  --ifm-color-primary-darker: #0500e1;
+  --ifm-color-primary-darkest: #0500e1;
+  --ifm-color-primary-light: #0500e1;
+  --ifm-color-primary-lighter: #0500e1;
+  --ifm-color-primary-lightest: #0500e1;
+  --ifm-code-font-size: 95%;
+  --ifm-font-family-base: "Inter Variable", sans-serif;
+  --ifm-font-family-monospace: "Roboto Mono", monospace;
+  --ifm-font-weight-bold: 640;
+  --ifm-h4-font-size: 20px;
+  --ifm-h5-font-size: 18px;
+  --ifm-h6-font-size: 16px;
+  --ifm-global-radius: 0;
+  --ifm-alert-border-width: 5px;
+  --docusaurus-highlighted-code-line-bg: #e8e8ff;
+  --ifm-color-secondary-text: #71717A;
+  --ifm-color-card-heading: #09090B;
+  --ifm-color-card-heading-secondary: #18181B;
+  --ifm-alert-foreground: #EF4444;
+  --ifm-alert-background: #FEF2F2;
+  --ifm-note-foreground: #71717A;
+  --ifm-note-background: #F4F4F5;
+  --ifm-caution-foreground: #FB843C;
+  --ifm-caution-background: #FFF7ED;
+  --ifm-info-foreground: #3B82F6;
+  --ifm-info-background: #EFF6FF;
+  --ifm-tip-foreground: #059669;
+  --ifm-tip-background: #F0FDF4;
+  --ifm-example-foreground: #F59E0B;
+  --ifm-example-background: #FEFCE8;
+}
+
+/* For readability concerns, you should choose a lighter palette in dark mode. */
+html[data-theme='dark'] {
+  --ifm-color-primary: #00ffff;
+  --ifm-color-primary-dark: #00ffff;
+  --ifm-color-primary-darker: #00ffff;
+  --ifm-color-primary-darkest: #00ffff;
+  --ifm-color-primary-light: #00ffff;
+  --ifm-color-primary-lighter: #00ffff;
+  --ifm-color-primary-lightest: #00ffff;
+  --docusaurus-highlighted-code-line-bg: #343484;
+  --ifm-color-secondary-text: #A1A1AA;
+  --ifm-color-card-heading: #FAFAFA;
+  --ifm-color-card-heading-secondary: #FAFAFA;
+  --ifm-alert-foreground: #FEE2E2;
+  --ifm-alert-background: #431407;
+  --ifm-note-foreground: #A1A1AA;
+  --ifm-note-background: #27272A;
+  --ifm-caution-foreground: #FB923C;
+  --ifm-caution-background: #422006;
+  --ifm-info-foreground: #BFDBFE;
+  --ifm-info-background: #082F49;
+  --ifm-tip-foreground: #34D399;
+  --ifm-tip-background: #052E16;
+  --ifm-example-foreground: #FEF08A;
+  --ifm-example-background: #51430E;
+}
+
+/* Custom fonts */
+@font-face {
+  font-family: "Roboto";
+  src: url("/static/fonts/Roboto-Regular.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Roboto Medium";
+  src: url("/static/fonts/Roboto-Medium.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Roboto Mono";
+  src: url("/static/fonts/RobotoMono-Regular.ttf") format("truetype");
+}
+
+/* https://github.com/facebook/docusaurus/issues/10652 */
+code {
+  vertical-align: baseline;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Inter Variable", sans-serif;
+  letter-spacing: -0.04em;
+  font-weight: 400;
+}
+
+article strong {
+  font-family: "Inter Variable", sans-serif;
+}
+
+.docusaurus-highlight-code-line {
+  background-color: rgba(0, 0, 0, 0.1);
+  display: block;
+  margin: 0 calc(-1 * var(--ifm-pre-padding));
+  padding: 0 var(--ifm-pre-padding);
+}
+
+html[data-theme='dark'] .docusaurus-highlight-code-line {
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+.header-link::before {
+  content: '';
+  width: 24px;
+  height: 24px;
+  display: flex;
+}
+
+.header-github-link:hover,
+.header-www-link:hover {
+  opacity: 0.6;
+}
+
+.header-github-link::before {
+  content: '';
+  width: 24px;
+  height: 24px;
+  display: flex;
+  background: url("data:image/svg+xml,%3Csvg viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12'/%3E%3C/svg%3E")
+    no-repeat;
+}
+
+.header-www-link::before {
+  content: '';
+  width: 24px;
+  height: 24px;
+  display: flex;
+  background: url("data:image/svg+xml,%3Csvg viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill='none' stroke='%23000' stroke-width='2' d='M12 23c6.075 0 11-4.925 11-11S18.075 1 12 1 1 5.925 1 12s4.925 11 11 11zm0 0c3 0 4-5 4-11S15 1 12 1 8 6 8 12s1 11 4 11zM2 16h20M2 8h20' /%3E%3C/svg%3E")
+  no-repeat;
+}
+
+[data-theme='dark'] .header-github-link::before {
+  background: url("data:image/svg+xml,%3Csvg viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill='white' d='M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12'/%3E%3C/svg%3E")
+    no-repeat;
+}
+
+[data-theme='dark'] .header-www-link::before {
+  background: url("data:image/svg+xml,%3Csvg viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill='none' stroke='%23fff' stroke-width='2' d='M12 23c6.075 0 11-4.925 11-11S18.075 1 12 1 1 5.925 1 12s4.925 11 11 11zm0 0c3 0 4-5 4-11S15 1 12 1 8 6 8 12s1 11 4 11zM2 16h20M2 8h20' /%3E%3C/svg%3E")
+    no-repeat;
+}
+
+/* Add vertical spacing between the individual DocCards outside of DocCardList
+   component. */
+.markdown > a.card {
+  margin-bottom: 32px;
+}
+
+/* Reduce the font size to make the sidebar more appealing. */
+.theme-doc-sidebar-menu {
+  font-size: 14px;
+}
+
+/* Announcement bar has a dark bg in both themes; use cyan for visible border */
+.theme-announcement-bar {
+  border-bottom: 2px solid #00ffff !important;
+}
+
+/* Buttons don't inherit color from parent; fix close button visibility on dark bg */
+.theme-announcement-bar .close {
+  color: #ffffff;
+}
+
+/* Make the search field more Oasis-like */
+.navbar__search-input {
+  border-radius: 0;
+  border: 1px solid black;
+}
+/* The primary dark mode color is too aggressive for the eye when hovering over
+   the hits. Ideally we should color the matched substrings with the primary
+   color, but highlight it with --ifm-navbar-search-input-background-color when
+   hovering over. Temporary fix: Use a less aggressive color for everything. */
+html[data-theme="dark"] {
+  --search-local-highlight-color: #3ec8ff;
+}
+
+/* To have the full description of pages,
+   in combination with card heigt 100% to have even size boxes in a list.
+  */
+.card p {
+  white-space: normal;
+}
+
+/* Show the content of tabs slightly indented with a border on the left */
+.tabs-container > div {
+  margin-top: inherit !important;
+  padding: 1rem;
+  border-left: 3px solid var(--ifm-tabs-color-active-border);
+}
+
+/* Homepage specific styling */
+.homepage-container{
+  display: flex;
+  width: 100%;
+  max-width: 80rem;
+  justify-content: space-between;
+  align-items: stretch;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+}
+
+.docs-doc-id-README .container .row .col{
+   width: 100% !important;
+   max-width: 80rem!important;
+}
+
+.docs-doc-id-README .card {
+  background: none!important;
+  max-width: 100%;
+  backdrop-filter: none;
+}
+
+.docs-doc-id-README .card::before{
+  opacity: 0!important;
+}
+
+.docs-doc-id-README .card::after{
+  background: none!important;
+}
+
+.card:hover h2::after {
+  top: 0rem;
+  right: 0rem;
+}
+
+.docs-doc-id-README .theme-doc-footer,
+.docs-doc-id-README h1{
+  display: none;
+}
+
+/* DocCard specific styling */
+.col--6 .card {
+  max-width: 100%!important;
+}
+
+table .card{
+  min-width: 250px;
+  max-width: 400px;
+}
+
+.tag,
+a[rel="tag"] {
+  border: 0.0625rem solid var(--ifm-color-primary);
+  border-radius: 0.25rem;
+  padding: 0.125rem 0.5rem;
+  display: inline-block;
+  background-color: transparent;
+  font-weight: 400;
+  font-size: 0.875rem;
+}
+
+.tag {
+  margin-right: 0.375rem;
+}
+
+@media (max-width: 768px) {
+  table .card{
+    min-width: 182px;
+  }
+}
+
+/* Pagination Link styling */
+.pagination-nav__link {
+  border: none !important;
+}
+
+/* Admonition cards styling */
+.theme-admonition,
+.alert{
+  border-radius: 6px;
+}
+
+.theme-admonition-danger{
+  background-color: var(--ifm-alert-background)!important;
+  border: 1px solid var(--ifm-alert-foreground);
+}
+
+.theme-admonition-danger, .theme-admonition-danger a{
+  color: var(--ifm-alert-foreground);
+}
+
+.theme-admonition-danger svg{
+  fill: var(--ifm-alert-foreground)!important;
+}
+
+.theme-admonition-note{
+  background-color: var(--ifm-note-background);
+  border: 1px solid var(--ifm-note-foreground);
+}
+
+.theme-admonition-note, .theme-admonition-note a{
+  color: var(--ifm-note-foreground);
+}
+
+.theme-admonition-note svg{
+  fill: var(--ifm-note-foreground)!important;
+}
+
+.theme-admonition-caution,
+.theme-admonition-warning{
+  background-color: var(--ifm-caution-background);
+  border: 1px solid var(--ifm-caution-foreground);
+}
+
+.theme-admonition-warning, .theme-admonition-warning a,
+.theme-admonition-caution, .theme-admonition-caution a{
+  color: var(--ifm-caution-foreground);
+}
+
+.theme-admonition-warning svg,
+.theme-admonition-caution svg{
+  fill: var(--ifm-caution-foreground)!important;
+}
+
+.theme-admonition-info{
+  background-color: var(--ifm-info-background);
+  border: 1px solid var(--ifm-info-foreground);
+}
+
+.theme-admonition-info, .theme-admonition-info a{
+  color: var(--ifm-info-foreground);
+}
+
+.theme-admonition-info svg{
+  fill: var(--ifm-info-foreground)!important;
+}
+
+.theme-admonition-tip{
+  background-color: var(--ifm-tip-background);
+  border: 1px solid var(--ifm-tip-foreground);
+}
+
+.theme-admonition-tip, .theme-admonition-tip a{
+  color: var(--ifm-tip-foreground);
+}
+
+.theme-admonition-tip svg{
+  fill: var(--ifm-tip-foreground)!important;
+}
+
+.theme-admonition-example{
+  background-color: var(--ifm-example-background);
+  border: 1px solid var(--ifm-example-foreground);
+}
+
+.theme-admonition-example, .theme-admonition-example a{
+  color: var(--ifm-example-foreground);
+}
+
+.theme-admonition-example svg{
+  fill: transparent!important;
+}

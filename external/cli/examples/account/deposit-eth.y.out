@@ -1,0 +1,18 @@
+You are about to sign the following transaction:
+Format: plain
+Method: consensus.Deposit
+Body:
+  To: 0x90adE3B7065fa715c7a150313877dF1d33e777D5 (oasis1qpupfu7e2n6pkezeaw0yhj8mcem8anj64ytrayne)
+  Amount: 10.0 TEST
+Authorized signer(s):
+  1. Bx6gOixnxy15tCs09ua5DcKyX9uo2Forb32O6Hyjoc8= (ed25519)
+     Nonce: 0
+Fee:
+  Amount: 0.0 TEST
+  Gas limit: 73572
+  (gas price: 0.0 TEST per gas unit)
+
+Network:  testnet
+ParaTime: sapphire
+Account:  oscar
+(In case you are using a hardware-based signer you may need to confirm on device.)

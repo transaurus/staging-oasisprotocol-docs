@@ -1,0 +1,29 @@
+App ID:        rofl1qzd82n99vtwesvcqjfyur4tcm45varz2due7s635
+Admin:         oasis1qrk58a6j2qn065m6p06jgjyt032f7qucy5wqeqpt
+Staked amount: 10000.0
+Policy:
+  {
+    "quotes": {
+      "pcs": {
+        "tcb_validity_period": 30,
+        "min_tcb_evaluation_data_number": 17,
+        "tdx": {}
+      }
+    },
+    "enclaves": [
+      "z+StFagJfBOdGlUGDMH7RlcNUm1uqYDUZDG+g3z2ik8AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+      "6KfY4DqD1Vi+H7aUn5FwwLobEzERHoOit7xsrPNz3eUAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=="
+    ],
+    "endorsements": [
+      {
+        "any": {}
+      }
+    ],
+    "fees": 2,
+    "max_expiration": 3
+  }
+
+=== Instances ===
+- RAK:        UwuhJrOYX6FDOc27NilQSrcVEtWD9voq+ST+ohsaRTI=
+  Node ID:    DbeoxcRwDO4Wh8bwq5rAR7wzhiB+LeYn+y7lFSGAZ7I=
+  Expiration: 7

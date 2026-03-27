@@ -1,0 +1,243 @@
+package env
+
+import (
+	"fmt"
+	"os"
+	"os/exec"
+	"path/filepath"
+	"strings"
+	"sync"
+)
+
+// ExecEnv is an execution environment.
+type ExecEnv interface {
+	// WrapCommand modifies an existing `exec.Cmd` such that it runs in this environment.
+	WrapCommand(cmd *exec.Cmd) error
+
+	// PathFromEnv converts the given path from inside the environment into a path outside the
+	// environment.
+	PathFromEnv(path string) (string, error)
+
+	// PathToEnv converts the given path from outside the environment into a path inside the
+	// environment.
+	PathToEnv(path string) (string, error)
+
+	// FixPermissions ensures that the user executing this process owns the file at the given path
+	// outside the environment.
+	FixPermissions(path string) error
+
+	// HasBinary returns true iff the given binary name is available in this environment.
+	HasBinary(name string) bool
+
+	// IsAvailable returns true iff the given execution environment is available.
+	IsAvailable() bool
+}
+
+// NativeEnv is the native execution environment that executes all commands directly.
+type NativeEnv struct{}
+
+// NewNativeEnv creates a new native execution environment.
+func NewNativeEnv() *NativeEnv {
+	return &NativeEnv{}
+}
+
+// WrapCommand implements ExecEnv.
+func (ne *NativeEnv) WrapCommand(*exec.Cmd) error {
+	return nil
+}
+
+// PathFromEnv implements ExecEnv.
+func (ne *NativeEnv) PathFromEnv(path string) (string, error) {
+	return path, nil
+}
+
+// PathToEnv implements ExecEnv.
+func (ne *NativeEnv) PathToEnv(path string) (string, error) {
+	return path, nil
+}
+
+// FixPermissions implements ExecEnv.
+func (ne *NativeEnv) FixPermissions(string) error {
+	return nil
+}
+
+// HasBinary implements ExecEnv.
+func (ne *NativeEnv) HasBinary(name string) bool {
+	path, err := exec.LookPath(name)
+	return err == nil && path != ""
+}
+
+// IsAvailable implements ExecEnv.
+func (ne *NativeEnv) IsAvailable() bool {
+	return true
+}
+
+// String returns a string representation of the execution environment.
+func (ne *NativeEnv) String() string {
+	return "native environment"
+}
+
+// ContainerEnv is a Docker or Podman-based execution environment that executes all commands inside a
+// container using the configured image.
+type ContainerEnv struct {
+	image   string
+	volumes map[string]string
+}
+
+var containerCmds = []string{"docker", "podman"}
+var (
+	containerCmdPath string
+	containerCmdOnce sync.Once
+)
+
+// NewContainerEnv creates a new Docker or Podman-based execution environment.
+func NewContainerEnv(image, baseDir, dirMount string) *ContainerEnv {
+	return &ContainerEnv{
+		image: image,
+		volumes: map[string]string{
+			baseDir: dirMount,
+		},
+	}
+}
+
+// AddDirectory exposes a host directory to the container under the same path.
+func (de *ContainerEnv) AddDirectory(path string) {
+	de.volumes[path] = path
+}
+
+// WrapCommand implements ExecEnv.
+func (de *ContainerEnv) WrapCommand(cmd *exec.Cmd) error {
+	cmd.Err = nil // May be set by a previous exec.Command invocation.
+	origArgs := cmd.Args
+
+	var err error
+	wd := cmd.Dir
+	if wd == "" {
+		wd, err = os.Getwd()
+		if err != nil {
+			return err
+		}
+	}
+	workDir, err := de.PathToEnv(wd)
+	if err != nil {
+		return fmt.Errorf("bad working directory: %w", err)
+	}
+
+	var envArgs []string //nolint: prealloc
+	for _, envKV := range cmd.Env {
+		envArgs = append(envArgs, "--env", envKV)
+	}
+	// When no environment is set, copy over any OASIS_ and ROFL_ variables.
+	if len(cmd.Env) == 0 {
+		for _, envKV := range os.Environ() {
+			if !strings.HasPrefix(envKV, "OASIS_") && !strings.HasPrefix(envKV, "ROFL_") {
+				continue
+			}
+			envArgs = append(envArgs, "--env", envKV)
+		}
+	}
+
+	cmd.Path = getContainerCmd()
+	if cmd.Path == "" {
+		return fmt.Errorf("failed to find any of the containerization commands: %s", strings.Join(containerCmds, ", "))
+	}
+
+	cmd.Args = []string{
+		cmd.Path, "run",
+		"--rm",
+		"--platform", "linux/amd64",
+		"--workdir", workDir,
+	}
+	// Add interactive flag if stdin is set to allow piping data into the container.
+	if cmd.Stdin != nil {
+		cmd.Args = append(cmd.Args, "--interactive")
+	}
+	for hostDir, bindDir := range de.volumes {
+		cmd.Args = append(cmd.Args, "--volume", hostDir+":"+bindDir)
+	}
+	cmd.Args = append(cmd.Args, envArgs...)
+	cmd.Args = append(cmd.Args, de.image)
+	cmd.Args = append(cmd.Args, origArgs...)
+
+	return nil
+}
+
+// PathFromEnv implements ExecEnv.
+func (de *ContainerEnv) PathFromEnv(path string) (string, error) {
+	for hostDir, bindDir := range de.volumes {
+		if !strings.HasPrefix(path, bindDir) {
+			continue
+		}
+		relPath, err := filepath.Rel(bindDir, path)
+		if err != nil {
+			return "", fmt.Errorf("bad path: %w", err)
+		}
+		return filepath.Join(hostDir, relPath), nil
+	}
+	return "", fmt.Errorf("bad path '%s'", path)
+}
+
+// PathToEnv implements ExecEnv.
+func (de *ContainerEnv) PathToEnv(path string) (string, error) {
+	for hostDir, bindDir := range de.volumes {
+		if !strings.HasPrefix(path, hostDir) {
+			continue
+		}
+		relPath, err := filepath.Rel(hostDir, path)
+		if err != nil {
+			return "", fmt.Errorf("bad path: %w", err)
+		}
+		return filepath.Join(bindDir, relPath), nil
+	}
+	return "", fmt.Errorf("bad path '%s'", path)
+}
+
+// FixPermissions implements ExecEnv.
+// For container environments, we use chmod to make files accessible rather than chown,
+// because chown doesn't work correctly with rootless containers due to user namespace
+// UID mapping. Using chmod 666 works for both rootful and rootless containers.
+func (de *ContainerEnv) FixPermissions(path string) error {
+	pathEnv, err := de.PathToEnv(path)
+	if err != nil {
+		return err
+	}
+
+	cmd := exec.Command("chmod", "666", pathEnv)
+	if err = de.WrapCommand(cmd); err != nil {
+		return err
+	}
+	return cmd.Run()
+}
+
+// HasBinary implements ExecEnv.
+func (de *ContainerEnv) HasBinary(string) bool {
+	return true
+}
+
+// getContainerCmd finds a working docker or podman command and returns its path.
+func getContainerCmd() string {
+	containerCmdOnce.Do(func() {
+		for _, cmd := range containerCmds {
+			if path, err := exec.LookPath(cmd); err == nil && path != "" {
+				containerCmdPath = path
+				return
+			}
+		}
+	})
+	return containerCmdPath
+}
+
+// IsContainerRuntimeAvailable returns true if a container runtime (docker or podman) is available.
+func IsContainerRuntimeAvailable() bool {
+	return getContainerCmd() != ""
+}
+
+// IsAvailable implements ExecEnv.
+func (de *ContainerEnv) IsAvailable() bool {
+	return getContainerCmd() != ""
+}
+
+// String returns a string representation of the execution environment.
+func (de *ContainerEnv) String() string {
+	return "Container"
+}

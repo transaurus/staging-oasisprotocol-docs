@@ -1,0 +1,64 @@
+---
+description: Home of the Oasis dApp developer resources
+---
+
+import DocCard from '@theme/DocCard';
+import DocCardList from '@theme/DocCardList';
+import {findSidebarItem} from '@site/src/sidebarUtils';
+
+# Build on Oasis
+
+The best way to start learning is by example! If you want to jumpstart
+right into it, check out our use cases that combine TEE and blockchain to
+build trustless distributed apps.
+
+<DocCardList items={[
+    findSidebarItem('/build/use-cases/key-generation'),
+    findSidebarItem('/build/use-cases/trustless-agent'),
+    findSidebarItem('/build/use-cases/tgbot'),
+    findSidebarItem('/build/use-cases/price-oracle'),
+]} />
+
+## The Oasis SDK
+
+![Oasis architectural design including ParaTime and consensus layers](./images/oasis-sdk.svg)
+
+### ROFL-Powered Apps
+
+[Runtime off-chain logic (ROFL)][rofl] enables you to wrap applications in
+trusted environment (TEE) containers managed through [Sapphire]. This
+framework is ideal for deploying provably trusted oracles, compute-expensive
+tasks in AI or a backend for interactive games.
+
+<DocCard item={findSidebarItem('/build/rofl/')} />
+
+### Smart Contracts
+
+Smart Contracts are deployed to [Sapphire], an EVM-compatible Layer 1
+blockchain assuring confidential smart contract state. Extra on-chain
+features in your contracts such as the random number generator, cryptography,
+a cross-chain [privacy layer](opl/README.mdx) and ROFL verification are
+supported.
+
+<DocCard item={findSidebarItem('/build/sapphire/')} />
+
+[rofl]: ./rofl/README.mdx
+[Sapphire]: ./sapphire/README.mdx
+
+### Web Browser
+
+Sapphire supports optional encrypted transactions and queries through
+client-side end-to-end encryption. Modern Web3 libraries running in a [web
+browser] are supported.
+
+[web browser]: ./sapphire/develop/browser.md
+<DocCard item={findSidebarItem('/build/sapphire/develop/browser')} />
+
+### Server-Side Apps
+
+End-to-end encrypted transactions and queries are often required by server-side
+applications running either inside ROFL or outside of the TEE. Check out our
+comprehensive [API reference guide] for your preferred programming language to
+learn how to integrate with Oasis network.
+
+[API reference guide]: https://api.docs.oasis.io
