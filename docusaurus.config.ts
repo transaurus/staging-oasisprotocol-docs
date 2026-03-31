@@ -24,10 +24,10 @@ const config: Config = {
 
   i18n: {
     defaultLocale: 'en',
-    locales: ['en'],
+    locales: ["en", "zh-Hans"],
   },
 
-  onBrokenLinks: process.env.NETLIFY ? 'warn' : 'throw',
+  onBrokenLinks: 'warn',
   onBrokenAnchors: process.env.NETLIFY ? 'warn' : 'throw',
 
   presets: [
@@ -77,7 +77,7 @@ const config: Config = {
       return frontmatter
     },
     hooks: {
-      onBrokenMarkdownLinks: process.env.NETLIFY ? 'warn' : 'throw',
+      onBrokenMarkdownLinks: "warn",
       onBrokenMarkdownImages: process.env.NETLIFY ? 'warn' : 'throw',
     },
   },

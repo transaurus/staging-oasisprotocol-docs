@@ -1,0 +1,310 @@
+{
+  "version.label": {
+    "message": "Next",
+    "description": "The label for version current"
+  },
+  "sidebar.adrs.category.Architectural Decision Records": {
+    "message": "Architectural Decision Records",
+    "description": "The label for category 'Architectural Decision Records' in sidebar 'adrs'"
+  },
+  "sidebar.adrs.category.Architectural Decision Records.link.generated-index.description": {
+    "message": "This page contains a list of accepted Oasis ADRs. To see the currently discussed ADRs or to open a new ADR, visit the official oasisprotocol/adrs repository on github.com.",
+    "description": "The generated-index page description for category 'Architectural Decision Records' in sidebar 'adrs'"
+  },
+  "sidebar.oasisCore.category.Development Setup": {
+    "message": "Development Setup",
+    "description": "The label for category 'Development Setup' in sidebar 'oasisCore'"
+  },
+  "sidebar.oasisCore.category.Development Setup.link.generated-index.description": {
+    "message": "This section provides information on how to compile and configure complete Oasis Network stack locally in order for you to start exploring and contributing to the Oasis Core.",
+    "description": "The generated-index page description for category 'Development Setup' in sidebar 'oasisCore'"
+  },
+  "sidebar.oasisCore.category.Build Environment Setup and Building": {
+    "message": "Build Environment Setup and Building",
+    "description": "The label for category 'Build Environment Setup and Building' in sidebar 'oasisCore'"
+  },
+  "sidebar.oasisCore.category.Running Tests and Development Networks": {
+    "message": "Running Tests and Development Networks",
+    "description": "The label for category 'Running Tests and Development Networks' in sidebar 'oasisCore'"
+  },
+  "sidebar.oasisCore.category.High-Level Components": {
+    "message": "High-Level Components",
+    "description": "The label for category 'High-Level Components' in sidebar 'oasisCore'"
+  },
+  "sidebar.oasisCore.category.Consensus Layer": {
+    "message": "Consensus Layer",
+    "description": "The label for category 'Consensus Layer' in sidebar 'oasisCore'"
+  },
+  "sidebar.oasisCore.category.Services": {
+    "message": "Services",
+    "description": "The label for category 'Services' in sidebar 'oasisCore'"
+  },
+  "sidebar.oasisCore.category.Runtime Layer": {
+    "message": "Runtime Layer",
+    "description": "The label for category 'Runtime Layer' in sidebar 'oasisCore'"
+  },
+  "sidebar.oasisCore.category.Oasis Node": {
+    "message": "Oasis Node",
+    "description": "The label for category 'Oasis Node' in sidebar 'oasisCore'"
+  },
+  "sidebar.oasisCore.category.Common Functionality": {
+    "message": "Common Functionality",
+    "description": "The label for category 'Common Functionality' in sidebar 'oasisCore'"
+  },
+  "sidebar.oasisCore.category.Protocols": {
+    "message": "Protocols",
+    "description": "The label for category 'Protocols' in sidebar 'oasisCore'"
+  },
+  "sidebar.oasisCore.category.Processes": {
+    "message": "Processes",
+    "description": "The label for category 'Processes' in sidebar 'oasisCore'"
+  },
+  "sidebar.oasisCore.link.ADRs": {
+    "message": "ADRs",
+    "description": "The label for link 'ADRs' in sidebar 'oasisCore', linking to '/adrs'"
+  },
+  "sidebar.oasisCore.link.Core Client TypeScript API": {
+    "message": "Core Client TypeScript API",
+    "description": "The label for link 'Core Client TypeScript API' in sidebar 'oasisCore', linking to 'https://api.docs.oasis.io/js/client'"
+  },
+  "sidebar.oasisCore.link.Core Client Go API": {
+    "message": "Core Client Go API",
+    "description": "The label for link 'Core Client Go API' in sidebar 'oasisCore', linking to 'https://pkg.go.dev/github.com/oasisprotocol/oasis-core/go'"
+  },
+  "sidebar.oasisCore.doc.Overview": {
+    "message": "Overview",
+    "description": "The label for the doc item 'Overview' in sidebar 'oasisCore', linking to the doc core/README"
+  },
+  "sidebar.oasisCore.doc.oasis-node CLI": {
+    "message": "oasis-node CLI",
+    "description": "The label for the doc item 'oasis-node CLI' in sidebar 'oasisCore', linking to the doc core/oasis-node/cli"
+  },
+  "sidebar.oasisCore.doc.Security": {
+    "message": "Security",
+    "description": "The label for the doc item 'Security' in sidebar 'oasisCore', linking to the doc core/SECURITY"
+  },
+  "sidebar.developers.category.Use cases": {
+    "message": "Use cases",
+    "description": "The label for category 'Use cases' in sidebar 'developers'"
+  },
+  "sidebar.developers.category.ROFL": {
+    "message": "ROFL",
+    "description": "The label for category 'ROFL' in sidebar 'developers'"
+  },
+  "sidebar.developers.category.Workflow": {
+    "message": "Workflow",
+    "description": "The label for category 'Workflow' in sidebar 'developers'"
+  },
+  "sidebar.developers.category.Features": {
+    "message": "Features",
+    "description": "The label for category 'Features' in sidebar 'developers'"
+  },
+  "sidebar.developers.category.Sapphire": {
+    "message": "Sapphire",
+    "description": "The label for category 'Sapphire' in sidebar 'developers'"
+  },
+  "sidebar.developers.category.Develop": {
+    "message": "Develop",
+    "description": "The label for category 'Develop' in sidebar 'developers'"
+  },
+  "sidebar.developers.category.Oasis Privacy Layer": {
+    "message": "Oasis Privacy Layer",
+    "description": "The label for category 'Oasis Privacy Layer' in sidebar 'developers'"
+  },
+  "sidebar.developers.category.Hyperlane Protocol": {
+    "message": "Hyperlane Protocol",
+    "description": "The label for category 'Hyperlane Protocol' in sidebar 'developers'"
+  },
+  "sidebar.developers.category.Router Protocol": {
+    "message": "Router Protocol",
+    "description": "The label for category 'Router Protocol' in sidebar 'developers'"
+  },
+  "sidebar.developers.category.OPL SDK": {
+    "message": "OPL SDK",
+    "description": "The label for category 'OPL SDK' in sidebar 'developers'"
+  },
+  "sidebar.developers.category.Celer Inter-Chain Messaging": {
+    "message": "Celer Inter-Chain Messaging",
+    "description": "The label for category 'Celer Inter-Chain Messaging' in sidebar 'developers'"
+  },
+  "sidebar.developers.category.Tools & Services": {
+    "message": "Tools & Services",
+    "description": "The label for category 'Tools & Services' in sidebar 'developers'"
+  },
+  "sidebar.developers.category.Oasis CLI": {
+    "message": "Oasis CLI",
+    "description": "The label for category 'Oasis CLI' in sidebar 'developers'"
+  },
+  "sidebar.developers.category.Build Paratime": {
+    "message": "Build Paratime",
+    "description": "The label for category 'Build Paratime' in sidebar 'developers'"
+  },
+  "sidebar.developers.category.Consensus Layer and Other ParaTimes": {
+    "message": "Consensus Layer and Other ParaTimes",
+    "description": "The label for category 'Consensus Layer and Other ParaTimes' in sidebar 'developers'"
+  },
+  "sidebar.developers.category.Cipher": {
+    "message": "Cipher",
+    "description": "The label for category 'Cipher' in sidebar 'developers'"
+  },
+  "sidebar.developers.category.Emerald": {
+    "message": "Emerald",
+    "description": "The label for category 'Emerald' in sidebar 'developers'"
+  },
+  "sidebar.developers.link.ParaTime Client TypeScript API": {
+    "message": "ParaTime Client TypeScript API",
+    "description": "The label for link 'ParaTime Client TypeScript API' in sidebar 'developers', linking to 'https://api.docs.oasis.io/js/client-rt'"
+  },
+  "sidebar.developers.link.ParaTime Client Go API": {
+    "message": "ParaTime Client Go API",
+    "description": "The label for link 'ParaTime Client Go API' in sidebar 'developers', linking to 'https://pkg.go.dev/github.com/oasisprotocol/oasis-sdk/client-sdk/go/client'"
+  },
+  "sidebar.developers.link.ParaTime SDK Rust API": {
+    "message": "ParaTime SDK Rust API",
+    "description": "The label for link 'ParaTime SDK Rust API' in sidebar 'developers', linking to 'https://api.docs.oasis.io/rust/oasis_runtime_sdk'"
+  },
+  "sidebar.developers.link.Rust API": {
+    "message": "Rust API",
+    "description": "The label for link 'Rust API' in sidebar 'developers', linking to 'https://api.docs.oasis.io/rust/oasis_contract_sdk'"
+  },
+  "sidebar.developers.doc.Overview": {
+    "message": "Overview",
+    "description": "The label for the doc item 'Overview' in sidebar 'developers', linking to the doc build/README"
+  },
+  "sidebar.general.category.Oasis Network": {
+    "message": "Oasis Network",
+    "description": "The label for category 'Oasis Network' in sidebar 'general'"
+  },
+  "sidebar.general.category.Manage your Tokens": {
+    "message": "Manage your Tokens",
+    "description": "The label for category 'Manage your Tokens' in sidebar 'general'"
+  },
+  "sidebar.general.category.ROSE Wallet": {
+    "message": "ROSE Wallet",
+    "description": "The label for category 'ROSE Wallet' in sidebar 'general'"
+  },
+  "sidebar.general.category.3rd Party Wallets and Services": {
+    "message": "3rd Party Wallets and Services",
+    "description": "The label for category '3rd Party Wallets and Services' in sidebar 'general'"
+  },
+  "sidebar.general.doc.Overview": {
+    "message": "Overview",
+    "description": "The label for the doc item 'Overview' in sidebar 'general', linking to the doc general/README"
+  },
+  "sidebar.general.doc.Web": {
+    "message": "Web",
+    "description": "The label for the doc item 'Web' in sidebar 'general', linking to the doc general/manage-tokens/oasis-wallets/web"
+  },
+  "sidebar.general.doc.Browser Extension": {
+    "message": "Browser Extension",
+    "description": "The label for the doc item 'Browser Extension' in sidebar 'general', linking to the doc general/manage-tokens/oasis-wallets/browser-extension"
+  },
+  "sidebar.getInvolved.category.Run a Node": {
+    "message": "Run a Node",
+    "description": "The label for category 'Run a Node' in sidebar 'getInvolved'"
+  },
+  "sidebar.getInvolved.link.Become our Ambassador": {
+    "message": "Become our Ambassador",
+    "description": "The label for link 'Become our Ambassador' in sidebar 'getInvolved', linking to 'https://oasis.net/ambassador-program'"
+  },
+  "sidebar.getInvolved.link.Become our Influencer": {
+    "message": "Become our Influencer",
+    "description": "The label for link 'Become our Influencer' in sidebar 'getInvolved', linking to 'https://oasis.net/influencer'"
+  },
+  "sidebar.getInvolved.link.Apply for Grant": {
+    "message": "Apply for Grant",
+    "description": "The label for link 'Apply for Grant' in sidebar 'getInvolved', linking to 'https://oasis.net/grant-programs'"
+  },
+  "sidebar.getInvolved.link.Join our University Program": {
+    "message": "Join our University Program",
+    "description": "The label for link 'Join our University Program' in sidebar 'getInvolved', linking to 'https://oasis.net/university-program'"
+  },
+  "sidebar.getInvolved.link.Follow Community Portal": {
+    "message": "Follow Community Portal",
+    "description": "The label for link 'Follow Community Portal' in sidebar 'getInvolved', linking to 'https://oasisrose.garden'"
+  },
+  "sidebar.operators.category.Network Information": {
+    "message": "Network Information",
+    "description": "The label for category 'Network Information' in sidebar 'operators'"
+  },
+  "sidebar.operators.category.Run Your Node": {
+    "message": "Run Your Node",
+    "description": "The label for category 'Run Your Node' in sidebar 'operators'"
+  },
+  "sidebar.operators.category.Prerequisites": {
+    "message": "Prerequisites",
+    "description": "The label for category 'Prerequisites' in sidebar 'operators'"
+  },
+  "sidebar.operators.category.Prerequisites.link.generated-index.description": {
+    "message": "This section lists hardware and software prerequisites for running an Oasis node.",
+    "description": "The generated-index page description for category 'Prerequisites' in sidebar 'operators'"
+  },
+  "sidebar.operators.category.ParaTime Client Node": {
+    "message": "ParaTime Client Node",
+    "description": "The label for category 'ParaTime Client Node' in sidebar 'operators'"
+  },
+  "sidebar.operators.category.Key Manager Node": {
+    "message": "Key Manager Node",
+    "description": "The label for category 'Key Manager Node' in sidebar 'operators'"
+  },
+  "sidebar.operators.category.Maintenance": {
+    "message": "Maintenance",
+    "description": "The label for category 'Maintenance' in sidebar 'operators'"
+  },
+  "sidebar.operators.category.Maintenance.link.generated-index.description": {
+    "message": "This section provides documentation on how to maintain your Oasis node setup over long run.",
+    "description": "The generated-index page description for category 'Maintenance' in sidebar 'operators'"
+  },
+  "sidebar.operators.category.Advanced": {
+    "message": "Advanced",
+    "description": "The label for category 'Advanced' in sidebar 'operators'"
+  },
+  "sidebar.operators.category.Advanced.link.generated-index.description": {
+    "message": "This section provides documentation on advanced usages of the Oasis node.",
+    "description": "The generated-index page description for category 'Advanced' in sidebar 'operators'"
+  },
+  "sidebar.operators.category.Reference": {
+    "message": "Reference",
+    "description": "The label for category 'Reference' in sidebar 'operators'"
+  },
+  "sidebar.operators.category.Reference.link.generated-index.description": {
+    "message": "Reference guide for node operators.",
+    "description": "The generated-index page description for category 'Reference' in sidebar 'operators'"
+  },
+  "sidebar.operators.category.Network Upgrades": {
+    "message": "Network Upgrades",
+    "description": "The label for category 'Network Upgrades' in sidebar 'operators'"
+  },
+  "sidebar.operators.category.Network Upgrades.link.generated-index.description": {
+    "message": "This section provides information about previous upgrades.",
+    "description": "The generated-index page description for category 'Network Upgrades' in sidebar 'operators'"
+  },
+  "sidebar.operators.category.Upgrade Logs": {
+    "message": "Upgrade Logs",
+    "description": "The label for category 'Upgrade Logs' in sidebar 'operators'"
+  },
+  "sidebar.operators.category.Upgrade Logs.link.generated-index.description": {
+    "message": "This section provides upgrade logs.",
+    "description": "The generated-index page description for category 'Upgrade Logs' in sidebar 'operators'"
+  },
+  "sidebar.operators.doc.Overview": {
+    "message": "Overview",
+    "description": "The label for the doc item 'Overview' in sidebar 'operators', linking to the doc node/README"
+  },
+  "sidebar.operators.doc.Web3 Gateway": {
+    "message": "Web3 Gateway",
+    "description": "The label for the doc item 'Web3 Gateway' in sidebar 'operators', linking to the doc node/web3"
+  },
+  "sidebar.operators.doc.gRPC Proxy": {
+    "message": "gRPC Proxy",
+    "description": "The label for the doc item 'gRPC Proxy' in sidebar 'operators', linking to the doc node/grpc"
+  },
+  "sidebar.operators.doc.Mainnet": {
+    "message": "Mainnet",
+    "description": "The label for the doc item 'Mainnet' in sidebar 'operators', linking to the doc node/reference/upgrade-logs/mainnet"
+  },
+  "sidebar.operators.doc.Testnet": {
+    "message": "Testnet",
+    "description": "The label for the doc item 'Testnet' in sidebar 'operators', linking to the doc node/reference/upgrade-logs/testnet"
+  }
+}
